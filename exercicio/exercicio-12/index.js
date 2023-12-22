@@ -42,7 +42,8 @@ document.getElementById('techAdd').addEventListener('click', function (ev) {
     btn.id = 'btnRemove'
     btn.innerText = 'Remover Tecnologia'
     btn.addEventListener('click', function (ev) {
-        this.parentElement.remove()
+        ev.preventDefault()
+        this.parentElement.parentElement.getElementsByTagName('div')[1].remove()
     })
 
     div.appendChild(document.createElement('br'))
